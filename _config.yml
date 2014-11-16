@@ -1,0 +1,11 @@
+# Site settings
+title: Nora &amp; Bernie
+description: Nora &amp; Bernie&rsquo;s Wedding - It&rsquo;s not the size of the wedding party, it&rsquo;s the size of the party in the wedding!
+
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.noraandbernie.com"
+
+timezone: America/Los_Angeles
+
+# Build settings
+markdown: kramdown

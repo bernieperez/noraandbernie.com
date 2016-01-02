@@ -5,7 +5,7 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   color: #5a5a5a;
-  background-image: url('/images/burlap.jpg');
+  background-image: url('{{ "/images/burlap.jpg" | prepend: site.baseurl }}');
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -22,7 +22,7 @@ body {
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  background-image: url('/images/burlap.jpg');
+  background-image: url('{{ "/images/burlap.jpg" | prepend: site.baseurl }}');
 }
 
 .carousel-inner > .item > img {

@@ -1,0 +1,49 @@
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTey_hRuCl480yXI2v-EaR1wKWaoZSar4&sensor=false">
+    </script>
+    <script>
+      google.maps.visualRefresh = true; // Enable the visual refresh
+      var map,
+        addressHotel = "Embassy Suites Brea, 900 E Birch St, Brea, CA 92821",
+        addressVenue = "Alta Vista Country Club, 777 Alta Vista St, Placentia, CA 92870";
+
+      function initialize() {
+        geocoder = new google.maps.Geocoder();
+        geocoder.geocode({
+          'address': addressVenue
+        }, function(results, status) {
+          if (status == google.maps.GeocoderStatus.OK) {
+            var mapOptions = {
+              zoom: 14,
+              center: results[0].geometry.location,
+              mapTypeId: google.maps.MapTypeId.ROADMAP,
+              mapTypeControl: false,
+            };
+            map = new google.maps.Map(document.getElementById('map-canvas-venue'),
+              mapOptions);
+            var marker = new google.maps.Marker({
+              map: map,
+              position: results[0].geometry.location
+            });
+          }
+        });
+        geocoder.geocode({
+          'address': addressHotel
+        }, function(results, status) {
+          if (status == google.maps.GeocoderStatus.OK) {
+            var mapOptions = {
+              zoom: 14,
+              center: results[0].geometry.location,
+              mapTypeId: google.maps.MapTypeId.ROADMAP,
+              mapTypeControl: false,
+            };
+            map = new google.maps.Map(document.getElementById('map-canvas-hotel'),
+              mapOptions);
+            var marker = new google.maps.Marker({
+              map: map,
+              position: results[0].geometry.location
+            });
+          }
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+      </script>

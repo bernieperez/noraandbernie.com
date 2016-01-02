@@ -13,9 +13,11 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-/* Carousel base class */
+.background {
+  padding-top: 10px;
+  background-color: #eee;
+}
+
 .carousel {
   margin-bottom: 20px;
 }
@@ -35,7 +37,6 @@ body {
 
 .details {
   text-align: center;
-  background-color: #eee;
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
@@ -52,11 +53,6 @@ body {
 address {
   padding-left: 30px;
 }
-
-.info {
-  background-color: #eee;
-}
-
 
 /* Fix Google Maps canvas
 *
